@@ -13,7 +13,13 @@ function App() {
 
   return (
     <div className="App">
-      
+      <Header />
+      <Nav />
+      <Home />
+      <NewPost />
+      <About />
+      <Missing />
+      <Footer />
     </div>
   );
 }
