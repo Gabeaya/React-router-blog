@@ -20,10 +20,14 @@ function App() {
     }
   ])
   const [searchResults, setSearchResults] = useState([]);
+  const history = useHistory();
   const handleDelete = (id) => {
+    const postList = posts.filter(post => post.id !== id);
+    setPosts(postsList);
+    history.push('/');
 
   }
-  
+
   return (
     <div className="App">
       <Header title="Gabe's Blog" />
