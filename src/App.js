@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header title="Gabe's Blog" />
       <Nav />
       <Switch>
         <Route exact path='/'>
