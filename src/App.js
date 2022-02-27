@@ -15,10 +15,12 @@ function App() {
     <div className="App">
       <Header />
       <Nav />
-      <Home />
-      <NewPost />
-      <About />
-      <Missing />
+      <Switch>
+        <Home />
+        <NewPost />
+        <About />
+        <Missing />
+      </Switch>
       <Footer />
     </div>
   );
