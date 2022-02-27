@@ -10,14 +10,24 @@ import { Route, Switch, useHistory } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
 function App() {
+  const [search, setSearch] = useState('');//('')is the default search input
+  const [posts, setPosts] = useState([
+    {
+      id: 1,
+      title: "Laid back in the whip",
+      datetime: "February 10, 2010 11:11:11 PM",
+      body: "With some cake and a beat."
+    }
+  ])
+  const [searchResults, setSearchResults] = useState([]);
 
   return (
     <div className="App">
       <Header title="Gabe's Blog" />
-      <Nav />
+      <Nav search={search} setSearch={setSearch}/>
       <Switch>
         <Route exact path='/'>
-          <Home />
+          <Home posts={posts}/>
         </Route>
         
         <Route exact path='/post'>
