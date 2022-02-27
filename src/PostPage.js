@@ -17,6 +17,15 @@ const PostPage = ({posts, handleDelete}) => {
             </button>
           </>
         }
+        {!post &&
+          <>
+          <h2> Post Not Found</h2>
+          <p>HAHAHAHAHAHAHA </p>
+          <p>
+            <Link to='/'>Go back Home</Link>
+          </p>
+          </>
+        }
       </article>
     </main>
   )
